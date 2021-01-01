@@ -1,0 +1,233 @@
+/* 初始化 */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li, ol, a {
+    list-style: none;
+    text-decoration: none;
+}
+.w{
+    margin: 0 auto;
+    width: 1200px;
+}
+/* 头部 */
+header{
+    background-image:url(../images/logo21.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+header h1{
+    height: 50px;
+    width: 1200px;
+    text-indent: 30px;
+    color: white;
+    letter-spacing: 7px;
+
+}
+.header-mai{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+.logo-main {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.logo-con img{
+    width: 15%;
+    padding: 10px 0;
+}
+.header-mai .title{
+    font-size: 46px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;   
+}
+.logoMoveAni {
+    animation: logoMove 3s ease;
+}
+.menu-con {
+    height: 150px;
+    line-height: 150px;
+}
+.menu-con ul {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+.menu-con li {
+    width: 100px;
+    flex: 1;
+    text-align: center;
+}
+/* 头部结束 */
+/* 内容开始 */
+.newhj {
+    width: 100%;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.newhj .container .intro {
+    background: url(../images/icon01.png) no-repeat;
+    background-size: 27px 28px;
+    height: 28px;
+    line-height: 28px;
+    margin: 60px 0 40px;
+    font-weight: bold;
+    text-indent: 40px;
+    font-size: 16px;
+}
+.newhj .container .pics {
+    display: flex;
+    margin-bottom: 40px;
+}
+.newhj .container .left, 
+.newhj .container .right {
+    flex-grow: 1;
+}
+.newhj .container .pics {
+    display: flex;
+    margin-bottom: 40px;
+}
+.pics .left img, 
+.pics .right .down img {
+    display: block;
+    width: 100%;
+}
+.newhj .right .up {
+    display: flex;
+}
+
+/* 焊机列表 */
+.hj{
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid #000000; */
+}
+.hj .hj-name ul{
+    display: flex;
+    color: rgb(153, 153, 153);
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+.hj .hj-name ul li{
+    /* border: 1px solid red; */
+    position: relative;
+    flex-grow: 1;
+    width: 100px;
+    text-align: center;
+}
+/* 产品列表 */
+
+.footer-list{
+    width: 100%;
+    height: 300px;
+    background-color: blueviolet;
+}
+.footer_conter{
+    width:1200px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: blueviolet;
+}
+.footer_list ul li{
+    color: white;
+    font-size: 18px;
+    margin: 20px;
+}
+
+/* 内容结束*/
+@media (min-width: 1200px){
+.header-mai {
+    width: 67%;
+}
+}
+@media (min-width:768px){
+    .header-mai{
+    padding:40px 0 80px;
+}
+}
+.toRightAni {
+    animation: toRight 1s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* 产品图动画 */
+.logoMoveAni{
+    animation: logoMove 2s ease;
+}
+.toRightAni{
+    animation: toRight 1s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* 字体从左向右动画 */
+@keyframes toRight {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* logo动画 */
+@keyframes logoMove {
+    0% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+    100% {
+        transform: perspective(400px);
+        opacity: 1;
+    }
+}
+
+.content_list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+ 
+}
+.content_list .list_itme{
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(51, 131, 230);
+}
+.content_list .imgs_left .imgs{
+    width: 310px;
+    padding-left: 5px;
+    border-radius: 10px;
+  
+}
+ .imgs_left .imgs:hover{
+    width: 350px;
+    padding-left: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+.list_itme .content_text ul li {
+    font-size: 14px;
+    font-family: "宋体";
+    line-height: 16px; 
+    margin:20px;
+  
+}
+.content_text h6{
+    text-indent: 50px;
+}
